@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="asset/css/style.css">
-    <title>Notre Sucré</title>
+    <title>PascalNoppe - Notre Sucré</title>
 </head>
 <body>
+<?php
+$bdd = new PDO('mysql:host=localhost;dbname=pascalnoppereno;charset=utf8', 'root', '');
+?>
 <header>
-    <div id="mainNav">
+    <div id="mainNav2" class="navLight">
         <div>
             <a href="index.html"><img id="logoNav" src="asset/img/LogoPN01-300x265.png" alt=""></a>
         </div>
@@ -23,6 +26,21 @@
         <div id="menu-button" class="close"></div>
     </div>
 </header>
+    <div id="boutique">
+        <?php
+        $reponse = $bdd->query('SELECT * FROM articles');
+        while ($donnees = $reponse->fetch()) {
+            if ($donnees['ArticleType']=='sucré'){
+        ?>
+        <div class="divBoutique">
+        <img class="imgArticle" src="<?php echo 'asset/img/'.$donnees['imageLink'].'.'.$donnees['TypeFichier']; ?>" alt="">
+            <p class="nameArticle"><?php echo $donnees['ArticleName']; ?></p>
+            <button class="buttonAchat">Reserver</button>
+        </div>
+            <?php }} ?>
+    </div>
+
+
 <script src="asset/js/main.js"></script>
 </body>
 </html>
