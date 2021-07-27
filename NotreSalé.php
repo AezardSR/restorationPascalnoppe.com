@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="asset/css/style.css">
-    <title>PascalNoppe - Notre Sucré</title>
+    <title>PascalNoppe - Notre Salé</title>
 </head>
 <body>
 <?php
@@ -19,8 +19,8 @@ $bdd = new PDO('mysql:host=localhost;dbname=pascalnoppereno;charset=utf8', 'root
         <nav id="menu" class="toggle-on">
             <a id="pres" href="presentation.html">Pascal Noppe</a>
             <a href="index.html" >Accueil</a>
-            <a href="NotreSucré.php" class="active">Notre Sucré</a>
-            <a href="NotreSalé.php">Notre Salé</a>
+            <a href="NotreSucré.php" >Notre Sucré</a>
+            <a href="NotreSalé.php" class="active">Notre Salé</a>
             <a href="contact.html">Contact</a>
         </nav>
         <div id="menu-button" class="close"></div>
@@ -30,7 +30,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=pascalnoppereno;charset=utf8', 'root
         <?php
         $reponse = $bdd->query('SELECT * FROM articles');
         while ($donnees = $reponse->fetch()) {
-            if ($donnees['ArticleType']=='sucré'){
+            if ($donnees['ArticleType']=='salé'){
         ?>
         <div class="divBoutique">
         <img class="imgArticle" src="<?php echo 'asset/img/'.$donnees['imageLink'].'.'.$donnees['TypeFichier']; ?>" alt="">
