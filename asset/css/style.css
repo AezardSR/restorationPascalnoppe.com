@@ -78,16 +78,13 @@ main p{
     margin: 15px 0 15px 0;
 }
 
-#mainArticle{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+
+main div{
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-#photoArticle{
-    float: left;
-    margin: 3%;
-}
 #pres{
     font-size: 23px;
 }
@@ -145,9 +142,7 @@ main p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
-
 .imgBrochure{
     width: 200px;
 }
@@ -200,6 +195,137 @@ footer{
     background-color: #EE2274;
     height: 30px;
 }
+#articleBlog{
+    
+}
+.divBlog{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    text-align: center;
+}
+.divBlog a{
+    text-decoration: none;
+    color: #F03074;
+}
+.divBlog a:hover{
+    color: #c92860;
+}
+
+/*-----------------Presentation-------------------*/
+#h1pres{
+    color: #EE2274;
+    margin: 10px 0 10px 0;
+    font-size: 25px;
+}
+#mainArticle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#photoArticle{
+    float: left;
+    margin: 3%;
+}
+#article{
+    width: 80%;
+}
+#article p{
+    margin: 10px 0 10px 0;
+}
+
+/*-----------form contact------------*/
+#contact-form {
+    max-width: 1208px;
+    max-width: 75.5rem;
+    margin: 0 auto;
+  }
+  #contact, label, input[name="submit"] {
+    position: relative;
+  }
+  label > span, input, textarea, button {
+    box-sizing: border-box;
+  }
+  label {
+    display: block;
+  }
+  label > span {
+    display: none;
+  }
+  input, textarea, button {
+    width: 100%;
+    padding: 0.5em;
+    border: none;
+    font: 300 100%/1.2 Ubuntu, sans-serif;
+  }
+  input[type="text"], input[type="email"], textarea {
+    margin: 0 0 1em;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  input.invalid, textarea.invalid {
+    border-color: #d5144d;
+  }
+  textarea {
+    height: 6em;
+  }
+  input[type="submit"], button {
+    background: #EE2274;
+    color: white;
+  }
+  input[type="submit"]:hover, button:hover {
+    background: #b91a5a;
+  }
+  @media screen and (min-width: 30em) {
+    #contact-form h2 {
+      margin-left: 26.3736%;
+      font-size: 2em;
+      line-height: 1.5;
+    }
+    label > span {
+      vertical-align: top;
+      display: inline-block;
+      width: 26.3736%;
+      padding: 0.5em;
+      border: 1px solid transparent;
+      text-align: right;
+    }
+    input, textarea, button {
+      width: 73.6263%;
+      line-height: 1.5;
+    }
+    textarea {
+      height: 10em;
+    }
+    input[type="submit"], button {
+      margin-left: 26.3736%;
+    }
+  }
+  @media screen and (min-width: 48em) {
+    #contact-form {
+      text-align: justify;
+      line-height: 0;
+    }
+    #contact-form:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+    }
+    #contact-form h2 {
+      margin-left: 17.2661%;
+    }
+    #contact-form form, #contact-form aside {
+      vertical-align: top;
+      display: inline-block;
+      width: 65.4676%;
+      text-align: left;
+      line-height: 1.5;
+    }
+    #contact-form aside {
+      width: 30.9353%;
+    }
+  }
 @media screen and (max-width: 1024px) {
     .toggle-on{
         display: none;

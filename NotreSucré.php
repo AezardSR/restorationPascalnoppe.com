@@ -18,7 +18,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=pascalnoppereno;charset=utf8', 'root
         </div>
         <nav id="menu" class="toggle-on">
             <a id="pres" href="presentation.html">Pascal Noppe</a>
-            <a href="index.html" >Accueil</a>
+            <a href="index.php" >Accueil</a>
             <a href="NotreSucré.php" class="active">Notre Sucré</a>
             <a href="NotreSalé.php">Notre Salé</a>
             <a href="contact.html">Contact</a>
